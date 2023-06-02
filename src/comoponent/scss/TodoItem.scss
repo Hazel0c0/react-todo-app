@@ -1,0 +1,62 @@
+@mixin content-center{
+  //정중앙 정렬
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+
+  &:hover .remove {
+    //todo-list-item 하버시
+    display: block;
+  }
+
+  .check-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #9da1a7;
+    font-size: 24px;
+    margin-right: 20px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.active {
+      color: hotpink;
+      border: 1px solid hotpink;
+    }
+  }
+
+  .text {
+    font-size: 21px;
+    color: #001529;
+    flex: 1; //나머지의 최소크기 보장 하고 나머지 다먹음
+
+    &.finish {
+        color: rgb(197, 197, 197);
+    }
+  }
+
+  .remove {
+    font-size: 28px;
+    cursor: pointer;
+    color: lightcoral;
+
+    @include content-center;
+
+    display: none;
+
+    &:hover {
+      color: aquamarine;
+      opacity: 0.8;
+    }
+
+  }
+}

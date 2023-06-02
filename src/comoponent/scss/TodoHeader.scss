@@ -1,0 +1,26 @@
+// 변수 사용 가능
+// 문자열, 픽셀 저장가능 / 연산가능
+$my-dark-gray: darkslategrey;
+
+header {
+  padding: 48px 32px 24px;
+  border-bottom: 1px solid lightcoral;
+
+  h1 {
+    font-size: 36px;
+    color: $my-dark-gray;
+  }
+
+  .day {
+    margin-top: 4px;
+    color: rgb(129, 223, 191);
+    font-size: 21px;
+    font-weight: 700;
+  }
+  .tasks-left {
+    color: #20c997;
+    font-size: 18px;
+    margin-top: 40px;
+    font-weight: 700;
+  }
+}

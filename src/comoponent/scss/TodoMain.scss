@@ -1,0 +1,5 @@
+.todo-list {
+  flex: 1;  //1:1:1.. 비율
+  padding: 20px 32px 48px;
+  overflow: auto; // list 개수 많아지면 스크롤
+}
