@@ -189,6 +189,7 @@ const TodoTemplate = () => {
           promote={promote}
         />
         <TodoMain 
+        // 할일 적는 공간
           todoList={todos} 
           remove={removeTodo} 
           check={checkTodo} 

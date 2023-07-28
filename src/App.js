@@ -12,7 +12,7 @@ function App() {
     <>
       <Header/>
 
-      {/*<TodoTemplate/>*/}
+      <TodoTemplate/>
       {/*<Join />*/}
       {/*<Login />*/}
 
