@@ -32,6 +32,8 @@ $ npm install sass // scss 문법 사용 (위한 템플렛)
 $ npm install @mui/material @emotion/react @emotion/styled
 $ npm install @mui/icons-material
 $ npm install react-router-dom
+
+$ npm install react-icons classnames reactstrap bootstrap sass @mui/material @emotion/react @emotion/styled @mui/icons-material react-router-dom
 ```
 
 ## 리액트 라우터 설정
