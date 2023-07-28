@@ -1,16 +1,18 @@
 import React, {useState} from 'react'
 import {MdAdd} from "react-icons/md";
 import cn from 'classnames';
+// ^ cn 이름은 내가 정할 수 있음
 import './scss/TodoInput.scss'
 
 const TodoInput = ({addTodo}) => {
+
+  // 1. 클릭 이벤트를 통해 상태값 변경
 
   //입력창이 열리는 여부를 표현하는 상태값
   const [open, setOpen] = useState(false);
 
   // 할일 입력창에 입력한 내용을 ㅍ현하는 상태값
   const [todoText, setTodoText] = useState('');
-
   // + 버튼 클릭시 이벤트 처리
   const onToggle = () => {
     setOpen(!open);
@@ -19,6 +21,7 @@ const TodoInput = ({addTodo}) => {
 
   const showForm = () => {
     if (open) {
+      // open이 ture 일 때만 아래 리턴문이 리턴 되도록
       return (
         <div className={'form-wrapper'}>
           <form className='insert-form'>
@@ -31,6 +34,9 @@ const TodoInput = ({addTodo}) => {
       );
     }
   };
+
+
+
 
   // 서브밋 이벤트 핸들러
   const submitHandler = e => {
@@ -59,6 +65,10 @@ const TodoInput = ({addTodo}) => {
   return (
     <>
       {
+        /* 
+          showForm 함수의 if(open) 문 대신 
+          open && 으로도 가능
+        */
         open && (
           <div className={'form-wrapper'}>
             <form className='insert-form' onSubmit={submitHandler}>
@@ -81,6 +91,9 @@ const TodoInput = ({addTodo}) => {
             false 일 경우 제거
       */}
       <button className={cn('insert-btn', {open})} onClick={onToggle}>
+        {/* 상태변수 이름과 클래스 이름이 다를 경우
+        abc: open 이렇게 
+        open이 true일 경우 abc 클래스가 붙음 */}
         <MdAdd/>
       </button>
     </>
