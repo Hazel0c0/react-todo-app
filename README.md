@@ -47,7 +47,14 @@ root.render(
 );
 ```
 
-## reset css
+## sass
+1. reset css
 ```
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
 ```
+
+2. 변수 사용
+```
+$back-color : #11111;
+```
+

@@ -14,6 +14,7 @@ const TodoInput = ({addTodo}) => {
   // + 버튼 클릭시 이벤트 처리
   const onToggle = () => {
     setOpen(!open);
+    // ^ 상태값 변경 함수를 사용해서 true , false
   };
 
   const showForm = () => {
