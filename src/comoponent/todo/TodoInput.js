@@ -52,6 +52,8 @@ const TodoInput = ({addTodo}) => {
      */
     // console.log(todoText); 서브밋 할 때 todoText 값 사용
     addTodo(todoText);
+    // 원하는 시점에서 상위 컴포넌트로 보낼 'addTodo' 를 호출해서
+    // todoText 를 보내줌
 
     // 입력이 끝나면 입력창 비우기
     setTodoText(''); // 바로 반영 안됨

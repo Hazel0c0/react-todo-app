@@ -42,8 +42,11 @@ const TodoTemplate = () => {
     // }
 
     // TodoInput에게 todoText를 받아오는 함수
+  // 1. 하위 컴포넌트에서 가져오기 위해서 함수를 만듦
     const addTodo = todoText => {
-        // console.log('할일 정보 in TodoTemplate: ', todoText);
+      // 2. 매개변수로 하위컴포넌트에서 가져올것을 지정
+      // 3. 이 함수를 TodoInput 에게 보내준다
+        console.log('할일 정보 in TodoTemplate: ', todoText);
 
         const newTodo = {
           title: todoText
