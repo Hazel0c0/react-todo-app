@@ -11,7 +11,7 @@ const TodoInput = ({addTodo}) => {
   //입력창이 열리는 여부를 표현하는 상태값
   const [open, setOpen] = useState(false);
 
-  // 할일 입력창에 입력한 내용을 ㅍ현하는 상태값
+  // 할일 입력창에 입력한 내용을 표현하는 상태값
   const [todoText, setTodoText] = useState('');
   // + 버튼 클릭시 이벤트 처리
   const onToggle = () => {
@@ -40,25 +40,29 @@ const TodoInput = ({addTodo}) => {
 
   // 서브밋 이벤트 핸들러
   const submitHandler = e => {
+    // 서브밋 기능을 활용 하지만 실제로 보내지면 안됨
+    // 화면 전환 일어나면 안됨
     e.preventDefault(); // 태그의 기본기능 제한
-    // console.log('폼이 제출됨');
+    console.log('폼이 제출됨');
 
-    // const $input = document.querySelector('.insert-form input')
-    // console.log($input.value);
-    // $input.value='';
-    // console.log(todoText);
+    /*
+    const $input = document.querySelector('.insert-form input')
+    console.log($input.value);
+    $input.value='';
+     */
+    // console.log(todoText); 서브밋 할 때 todoText 값 사용
     addTodo(todoText);
 
     // 입력이 끝나면 입력창 비우기
-    setTodoText('');
+    setTodoText(''); // 바로 반영 안됨
   };
 
 
   // input change 이벤트 핸들러 함수
   const todoChangeHandler = e => {
     // console.log(e.target.value);
-    //e.target : input
-    setTodoText(e.target.value);
+    // e.target : input
+    setTodoText(e.target.value); // 입력값 저장
   }
 
 
@@ -76,8 +80,10 @@ const TodoInput = ({addTodo}) => {
                 type={'text'}
                 placeholder={'할 일을 입력 후, 엔터를 누르세여!!'}
                 onChange={todoChangeHandler}
-                autoFocus
+                autoFocus // 자동 커서
                 value={todoText}
+                  // value 값으로 todoText를 반영해주어야
+                  // 입력 후 '빈문자열'로 렌더링 됨
               />
             </form>
           </div>
