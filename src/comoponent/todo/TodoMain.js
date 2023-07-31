@@ -9,6 +9,14 @@ const TodoMain = ({todoList, remove, check}) => {
   return (
     <ul className={'todo-list'}>
       {
+
+        // const todoItems =[];
+        // for (const todo of todoList) {
+        //   todoItems.push(<TodoItem />);
+        // }
+        //
+        //   todoList.map(todo => <TodoItem />
+
         // renderTodoItem()
         todoList.map(todo => <TodoItem
                                 key={todo.id}
