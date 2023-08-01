@@ -104,8 +104,22 @@ const TodoTemplate = () => {
 
   // 할 일 삭제 처리 함수
   const removeTodo = id => {
-    // console.log(`삭제대상 id: ${id}`);
-    // setTodos(todos.filter(todo => todo.id !== id));
+    // 이걸 todoMain 에게 내려 보냄
+    console.log(`삭제대상 id: ${id}`);
+
+    /*
+    삭제할 대상을 찾으려면 for문 이용해서 찾아야함
+     */
+    // 불변성 떄문에 카피본을 만들어줌
+    const copyTodos = [...todos];
+    // 카피본에서 삭제 진행
+    copyTodys.splice(idx,1);
+    setTodos(copyTodos);
+
+    // -->
+    setTodos(todos.filter(todo => todo.id !== id));
+    // todo.id가 id와 다른것만 필터(=남긴다)
+
 
     fetch(`${API_BASE_URL}/${id}`, {
       method: 'DELETE',
